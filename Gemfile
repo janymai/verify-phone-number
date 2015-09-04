@@ -26,6 +26,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'versionist'
 # verify phone_number
 gem 'twilio-ruby', '~> 4.1.0'
+# manage env variable
+gem 'dotenv-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

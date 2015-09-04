@@ -20,10 +20,10 @@ class PhoneNumber < ActiveRecord::Base
 
   # Update status verify
   def verify(entered_pin)
-    update(verified: true) if self.pin == entered_pin
+    update(verified: true) if verified?(entered_pin)
+  end
+
+  def verified?(entered_pin)
+    self.pin == entered_pin
   end
 end
-
-# export TWILIO_ACCOUNT_SID="AC6ad9ffa99752fd52c5c5351becdddc5e"
-# export TWILIO_AUTH_TOKEN="088d40319b4c956ea81e556741c10815"
-# export TWILIO_PHONE_NUMBER="+12242315561"

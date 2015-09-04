@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   api_version(:module => "V1", :path => {:value => "v1"}, :default => true) do
     resources :phone_numbers, only: [:create]
     post 'phone_numbers/verify' => "phone_numbers#verify"
+    put  'phone_numbers/logout' => "phone_numbers#logout"
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
